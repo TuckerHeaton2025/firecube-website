@@ -55,6 +55,8 @@ nav a:hover {
 nav .home-link {
     font-size: 1.4em;
     margin-right: auto;
+    color: #ff4500;
+    font-weight: 600;
 }
 
 nav svg {

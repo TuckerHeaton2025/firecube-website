@@ -9,11 +9,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+::selection{
+    color: #ffffff;
+    background-color: #252525;
+}
 :root {
-    --color-1: #305e43;
+    --color-1: #474747;
     --text-color: #f0f0f0;
-    --accent-color: #3d7755;
+    --accent-color: #222222;
 }
 
 * {

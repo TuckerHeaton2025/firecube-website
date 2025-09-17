@@ -3,137 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\404.css">
     <title>🔎 404 Not Found | FireCube</title>
 </head>
-<style>
-    @font-face {
-        font-family: 'OpenSans';
-        src: url("fonts\\OpenSans-VariableFont_wdth,wght.ttf");
-    }
-    *{
-        font-family: OpenSans, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body{
-        height: 100vh;
-        padding-top: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #000000;
-    }
-    nav{
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 400px;
-        padding: 2rem;
-    }
-    nav .nav_logo a{
-        font-size: 1.8rem;
-        font-weight: 600;
-        color: #ff4500;
-        text-decoration: none;
-    }
-    nav .nav_logo:after{
-        content: ""; 
-        display: block; 
-        width: 0%; 
-        padding-top: 5px; 
-        border-bottom: 2px solid rgb(255, 0, 0);
-        transition: .5s; 
-    }
-    nav .nav_logo:hover:after{
-        width: 44%;
-    }
-    .container{
-        max-width: 400px;
-        padding: 2rem;
-        margin: auto;
-        display: grid;
-        color: #ffffff;
-    }
-    header{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-    header h1{
-        font-size: 4rem;
-        font-weight: 900;
-    }
-    .container h3{
-        font-size: 2rem;
-        font-weight: 700;
-    }
-    .container img{
-        width: 100%;
-        max-width: 300px;
-        margin: auto;
-    }
-    footer{
-        display: grid;
-        gap: 2rem;
-        place-content: baseline;
-    }
-    footer p{
-        font-variation-settings: 1rem;
-    }
-    footer a{
-        text-align: center;
-        text-decoration: none;
-        padding: 1rem;
-        border-radius: 5px;
-        color: #ffffff;
-        font-size: 1.4rem;
-        font-weight: 600;
-        background-color: #3ad900;
-        cursor: pointer;
-        transition: .3s;
-    }
-    footer a:hover{
-        background-color: #ffffff;
-        color: #3ad900;
-    }
-    @media (min-width: 640px)
-    {
-        nav{
-            max-width: 1000;
-        }
-        .container{
-            max-width: 1200px;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-        .container img{
-            max-width: 550px;
-            grid-area: 1/1/3/2;
-        }
-        footer{
-            max-width: 300px;
-        } 
-    }
-    @media (min-width: 1024px)
-    {
-        .container{
-            column-gap: 5rem;
-        }
-        .container header h1{
-            font-size: 5.5rem;
-        }
-        .container header h3{
-            font-size: 2.5rem;
-        }
-    }
-</style>
 <body>
     <nav>
         <div class="nav_logo">
-            <a href="/">FireCube🔥</a>
+            <a href="index.html">FireCube🔥</a>
         </div>
     </nav>
     <div class="container">
@@ -141,12 +17,11 @@
             <h1>404</h1>
             <h3>Page Not Found</h3>
         </header>
-        <img src="images\404-server-img.png" alt="Image of a server">
+        <img src="images/404-server-img.png" alt="Image of a server">
         <footer>
             <p>Try checking for mispellings or return to the homepage.</p>
-            <a href="/">HOME</a>
+            <a href="index.html">HOME</a>
         </footer>
     </div>
 </body>
-
 </html>

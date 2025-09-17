@@ -1,0 +1,346 @@
+body{
+    background: url('/images/about-bg.jpeg') no-repeat;
+    background-position: center;
+    width: 100%;
+}
+main{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+.about-section{
+    min-height: 100vh;
+}
+.about-heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    margin: 0px auto;
+}
+.about-heading h1{
+    font-size: 50px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    position: relative;
+}
+.about-heading h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #e9bb49;
+}
+.about-heading p{
+    font-size: 18px;
+    color: #e4e4e4;
+    margin-bottom: 35px;
+}
+.about-container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #5e5b70;
+    border-radius: 10px;
+}
+.about-us{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+.about-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+.about-image:hover img{
+    transform: scale(1.2);
+}
+.about-content{
+    flex: 1;
+}
+.about-content h2{
+    color: #f3da95;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #f0f0f0;
+}
+.about-content .newsletter-btn{
+    display: inline-block;
+    padding: 12px 20px;
+    color: #e4e4e4;
+    background-color: #ff4500;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.about-content .newsletter-btn:hover{
+    background-color: #e4e4e4;
+    color: #ff4500;
+    transform: scale(1.05);
+}
+@media screen and (max-width: 1148px){
+    .about-heading{
+        padding: 35px;
+    }
+    .about-heading h1{
+        font-size: 36px;
+    }
+    .about-heading p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .about-container{
+        padding: 0px;
+    }
+    .about-content h2{
+        font-size: 21.5px;
+    }
+    .about-us{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .about-image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .about-content p{
+        padding: 0px;
+        font-size: 16px;
+    }
+    .about-content .newsletter-btn{
+        font-size: 16px;
+    }
+    .about-section{
+        margin-bottom: 100px;
+    }
+}
+@media screen and (max-width: 500px){
+    .about-heading h1{
+        font-size: 34px;
+    }
+    .about-content h2{
+        font-size: 20.7px;
+    }
+    .about-heading p{
+        font-size: 15px;
+    }
+    .about-content p{
+        font-size: 14.5px;
+    }
+    .about-content .newsletter-btn{
+        font-size: 14.5px;
+    }
+    .about-content span , .about-heading span{
+        display: none;
+    }
+    .about-section{
+        margin-bottom: 0px;
+    }
+}
+
+/* MISSION CARDS */
+
+.mission-section{
+    min-height: 50vh;
+}
+.mission-title{
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+}
+.mission-title::after{
+    content: "";
+    height: 4px;
+    width: 280px;
+    background-color: #e69597;
+    display: block;
+    margin: auto;
+}
+.missions{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 75px auto;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 20px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card .icon{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.card h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.card p{
+    color: #e4e4e4;
+    font-size: 17px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+.learn-btn{
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: #5e5b70;
+    transition: 0.4s ease;
+}
+.learn-btn:hover{
+    background-color: orangered;
+    transform: scale(1.1);
+}
+@media screen and (max-width: 1178px){
+    .missions{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        width: 85%;
+        display: flex;
+        margin: 20px 0px;
+    }
+}
+@media (max-width: 679px)
+{
+    .mission-title{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 485px){
+    .card{
+        width: 100%;
+    }
+   
+}
+@media screen and (max-width: 372px){
+    .card p{
+        font-size: 15px;
+    }
+    .card .icon{
+        font-size: 33px;
+    }
+    .card h2{
+        font-size: 26px;
+    }
+    .learn-btn{
+        font-size: 12px;
+    }
+    .mission-title{
+        font-size: 23px;
+    }
+}
+
+/* NEWSLETTER CSS */
+
+.newsletter_wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 15px;
+    padding-bottom: 150px;
+}
+.newsletter_wrapper h2{
+    font-size: 24px;
+    color: #fbd5a2;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.newsletter_wrapper p{
+    color: #e4d8c1;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.newsletter_wrapper form{
+    width: 500px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    position: relative;
+}
+.newsletter_wrapper form input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: transparent;
+    padding-left: 15px;
+    color: #ffffff;
+}
+.newsletter_wrapper form input::placeholder{
+    color: #919191;
+}
+.newsletter_wrapper form button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    color: #ffffff;
+    background: #bc8f8f;
+    font-weight: 700;
+    border: transparent;
+    text-transform: uppercase;
+    padding: 0 20px;
+    border-left: 1px solid #ffffff;
+    cursor: pointer;
+    transition: .3s;
+}
+.newsletter_wrapper form button:hover{
+    background-color: #966d6d;
+    font-size: 15px;
+}
+@media (max-width: 575px){
+    .newsletter_wrapper form{
+        width: 88%;
+    }
+}
+@media (max-width: 332px)
+{
+    .newsletter_wrapper form input::placeholder{
+        font-size: 12px;
+    }
+}

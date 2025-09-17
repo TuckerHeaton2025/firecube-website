@@ -10,8 +10,3 @@ form.addEventListener('submit', function (e) {
         return
     }
 });
-
-const captcha = document.querySelector('.h-captcha');
-if (window.screen.width <= 380) {
-    captcha.setAttribute('data-size', 'compact')
-}

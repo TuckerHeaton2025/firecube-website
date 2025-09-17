@@ -3,308 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images\firecube-logo.png">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="images/firecube-logo.png" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/about.css">
     <title>FireCube - About Us</title>
-    <style>
-        body{
-            background: url('images\\about-bg.jfif') no-repeat;
-            backdrop-filter: blur(5.5px);
-            background-size: cover;
-            background-position: center;
-        }
-        .about-us{
-            min-height: 70vh;
-            padding: 80px 0px;
-            margin-left: 50px;
-            margin-right: 50px;
-        }
-        .about-container{
-            max-width: 1200px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 30px;
-            border-radius: 10px;
-            margin: 0px auto;
-            background-color: #1b4b3b;
-        }
-        .about-image{
-            width: 50%;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        .about-image img{
-            display: block;
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-        .about-image:hover img{
-            transform: scale(1.1);
-        }
-        .about-content{
-            width: 50%;
-            margin-left: 40px;
-        }
-        .about-content h2{
-            color: #ffffff;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-        .about-content p{
-            color: #e4e4e4;
-            font-size: 17px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .about-content .btn{
-            font-size: 17px;
-            display: inline-block;
-            padding: 12px 16px;
-            background-color: #374976;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        #contact-btn{
-            margin-left: 25px;
-        }
-        .about-content .btn i{
-            margin-right: 5px;
-            margin-left: 5px;
-        }
-        .btn:hover{
-            background-color: #4b6094;
-        }
-        @media screen and (max-width: 1115px)
-        {
-            #contact-btn{
-                margin-left: 0px;
-                margin-top: 20px;
-            }
-            .about-content p{
-                font-size: 15px;
-            }
-        }
-        @media screen and (max-width: 990px)
-        {
-            .about-content p{
-                font-size: 17px;
-            }
-            #contact-btn{
-                margin-left: 30px;
-                margin-top: 0px;
-            }
-            .about-container{
-                flex-direction: column;
-                text-align: center;
-            }
-            .about-image, .about-content{
-                width: 100%;
-            }
-            .about-content{
-                padding: 0px;
-                margin-top: 50px;
-                margin-left: 0px;
-            }
-        }
-        @media screen and (max-width: 650px){
-            .about-content h2{
-                font-size: 30px;
-            }
-            .about-content .btn{
-                font-size: 13px;
-            }
-            .about-content p{
-                text-align: left;
-                font-size: 14px;
-            }
-            .about-us{
-                margin-right: 20px;
-                margin-left: 20px;
-            }
-            #contact-btn{
-                margin-left: 20px;
-            }
-            .about-content{
-                margin-top: 12px;
-            }
-        }
-        @media screen and (max-width: 465px){
-            .about-content h2{
-                font-size: 28px;
-            }
-            .about-content .btn{
-                font-size: 11px;
-            }
-            .about-content p{
-                font-size: 12px;
-            }
-            .about-us{
-                margin-right: 15px;
-                margin-left: 15px;
-            }
-        }
-        @media screen and (max-width: 421px)
-        {
-            #contact-btn{
-                margin-left: 0;
-                margin-top: 10px;
-            }
-        }
-        @media screen and (max-width: 365px){
-            .about-content h2{
-                font-size: 26px;
-                margin-bottom: 6px;
-            }
-            .about-content .btn{
-                font-size: 10px;
-            }
-            .about-content p{
-                font-size: 11px;
-            }
-            .about-us{
-                margin-right: 12px;
-                margin-left: 12px;
-            }
-        }
-        /* Article Section */
-        .article .source-link{
-            color: #0000ff;
-            text-decoration: none;
-        }
-        .article .source-link:hover{
-            text-decoration: underline;
-        }
-        .article .promo-link{
-            color: orangered;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.2s ease-in-out;
-        }
-        .article .promo-link:hover{
-            border-bottom: 2px solid #ff0000;
-            color: red;
-        }
-        .articles-section{
-            width: 100%;
-        }
-        .article-content{
-            width: 85%;
-            margin: 20px auto;
-        }
-        .articles-section .article-content .title{
-            width: 60%;
-            text-align: center;
-            margin: auto;
-        }
-        .articles-section .article-content .title h2{
-            font-size: 40px;
-            color: #fccc7a;
-        }
-        .articles-section .article-content .title p{
-            font-size: 18px;
-            color: #ffffff;
-            margin: 20px;
-        }
-        .articles-section .article-content .cards{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
-            margin: 25px auto;
-            margin-bottom: 150px;
-        }
-        .articles-section .article-content .cards .card{
-            width: 100%;
-            background-color: #836f31;
-            position: relative;
-        }
-        .articles-section .article-content .cards .card img{
-            width: 100%;
-            height: auto;
-        }
-        .articles-section .article-content .cards .card .article{
-            padding: 15px 20px;
-        }
-        .articles-section .article-content .cards .card .article h4{
-            font-size: 24px;
-            color: #e1eadf;
-        }
-        .articles-section .article-content .cards .card .article p{
-            font-size: 16px;
-            color: #dce0db;
-            margin: 10px 0px;
-        }
-        .articles-section .article-content .cards .card .blog-view a{
-            text-decoration: none;
-            display: inline-block;
-            background-color: #000000;
-            padding: 8px 15px;
-            margin-left: 20px;
-            color: #ffffff;
-            font-weight: bold;
-            margin-bottom: 20px;
-            transition: 0.4s ease-in-out;
-        }
-        .articles-section .article-content .cards .card .blog-view a:hover{
-            background-color: #ffffff;
-            color: #000000;
-        }
-        .articles-section .article-content .cards .card .posted-date p{
-            font-weight: 600;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: inline-block;
-            background-color: #959fa3;
-            padding: 3px 7px;
-        }
-        @media screen and (max-width: 1400px){
-            .articles-section .article-content .cards{
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media screen and (max-width: 900px){
-            .articles-section .article-content .cards{
-                grid-template-columns: 1fr;
-            }
-            .articles-section .article-content .title h2{
-                color: #ca9333;
-                font-size: 37px;
-            }
-            .articles-section .article-content .title p
-            {
-                font-size: 16px;
-            }
-            .articles-section .article-content .cards .card .article h4{
-                font-size: 22px;   
-            }
-            .articles-section .article-content .cards .card .article p{
-                font-size: 14px;
-            }
-        }
-        @media screen and (max-width: 420px){
-            .articles-section .article-content .title h2{
-                font-size: 35px;
-            }
-            .articles-section .article-content .title p
-            {
-                font-size: 14px;
-            }
-            .articles-section .article-content .cards .card .article h4{
-                font-size: 20px;   
-            }
-            .articles-section .article-content .cards .card .article p{
-                font-size: 12px;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -324,160 +30,128 @@
                     </svg>
                 </label>
 
-                <a class="home-link" href="/">FireCube🔥</a>
-                <a href="about">About</a>
-                <a href="products">Products</a>
-                <a href="contact">Contact</a>
+                <a class="home-link" href="index.html">FireCube🔥</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
             </div>
         </nav>
     </header>
-    <section class="about-us">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="images\about-us-img.jpg" alt="Monument Valley - Utah">
-            </div>
-            <div class="about-content">
-                <h2>About Us</h2>
+    <main>
+        <!-- ABOUT US -->
+        <section class="about-section">
+            <div class="about-heading">
+                <h1>About Us</h1>
                 <p>
-                    At Campfire Technologies, we're redefining the campfire experience
-                    with our innovative Fire Cubes.
-                    Based in the heart of Southwestern Utah, 
-                    we specialize in crafting campfire cubes that 
-                    are not only convenient but also eco-friendly. 
-                    Each Fire Cube is made from 100% natural materials, 
-                    ensuring a clean, sustainable burn that's 
-                    perfect for outdoor adventures.
-                    Whether you're camping, hiking, or 
-                    enjoying a backyard fire, our 
-                    Fire Cubes are ready to light and provide a cozy, 
-                    lasting flame with minimal effort. 
-                    Designed for those who cherish simplicity and nature,
-                    we believe in bringing people closer to the 
-                    outdoors—one Fire Cube at a time.
+                    We provide convenient, portable, ready-to-go campfire cubes<span> that make it
+                    easy to enjoy a hassle-free fire anytime, anywhere</span>.
                 </p>
-                <a href="https://mailchimp.com/" title="Stay up to date on product news and releases" target="_blank" class="btn">Subscribe to our newsletter <i class="fa-classic fa-envelope"></i></a>
-                <a href="contact.html" title="Get in touch" id="contact-btn" class="btn"><i class="fa-solid fa-arrow-right"></i> Contact Us</a>
             </div>
+            <div class="about-container">
+                <section class="about-us">
+                    <div class="about-image">
+                        <img src="images/about-us-img.jpg" alt="Bryce Canyon, Utah">
+                    </div>
+                    <div class="about-content">
+                        <h2>By campers for campers</h2>
+                        <p>
+                            At FireCube, we're all about bringing the magic of a 
+                            campfire wherever your adventure takes you. Based in 
+                            the heart of Southern Utah, we craft our portable, 
+                            ready-to-go campfire cubes using 100% naturally sourced
+                            wood and materials—no chemicals, no junk, just real fire 
+                            the way nature intended. <span>We're proud to support local 
+                            suppliers and small businesses in our community, making 
+                            every cube not just a spark for your fire, but a spark for
+                            our local economy too. Whether you're deep in the 
+                            backcountry or just hanging out in your backyard, we make it
+                            insanely easy to get a fire going—no stress, no mess, just 
+                            strike a match and relax.</span>
+                        </p>
+                        <a href="#newsletter" class="newsletter-btn">Our Newsletter</a>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- MISSION CARDS -->
+        <section class="mission-section">
+            <div class="mission-title">
+                <h1>Our Mission</h1>
+            </div>
+            <div class="missions">
+                <div class="card" style="background-color: #534730;">
+                    <div class="icon">
+                        <i><i class="fa-solid fa-tree" style="color: #469b46"></i></i>
+                    </div>
+                    <h2 style="color: #dbdbdb;">Forests</h2>
+                    <p>
+                        Our mission is to make enjoying the outdoors easier and more 
+                        sustainable by providing all-natural, portable campfire cubes sourced responsibly 
+                        from wood reclaimed in areas affected by local forest fires.
+                    </p>
+                    <a href="" class="learn-btn">Learn More</a>
+                </div>
+                <div class="card" style="background-color: #997537;">
+                    <div class="icon">
+                        <i><i class="fa-solid fa-handshake" style="color: #cecece"></i></i>
+                    </div>
+                    <h2 style="color: #fdb2d5;">Community</h2>
+                    <p>
+                        Our mission is to craft high-quality, all-natural campfire cubes
+                        while supporting our local economy by sourcing roguth cut lumber from nearby 
+                        sawmills and partnering with small businesses across Southern Utah.
+                    </p>
+                    <a href="" class="learn-btn">Learn More</a>
+                </div>
+                <div class="card" style="background-color: #9f6170;">
+                    <div class="icon">
+                        <i><i class="fa-solid fa-recycle" style="color: #59b0d8"></i></i>
+                    </div>
+                    <h2 style="color: #ffd89a;">Environment</h2>
+                    <p>
+                        Our mission is to protect the environment by creating clean-burning 
+                        campfire cubes made with zero chemicals and 
+                        absolutely no plastic, ensuring a safer, more natural outdoor experience.
+                    </p>
+                    <a href="" class="learn-btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+        <!-- NEWSLETTER FORM -->
+        <div class="newsletter_wrapper" id="newsletter">
+            <h2>NEWSLETTER</h2>
+            <p>Get the latest news on product releases, deals & more!</p>
+            <form action="">
+                <input type="email" required name="email" minlength="5" 
+                maxlength="60" placeholder="youremail@mail.com">
+                <button type="submit">Subscribe</button>
+            </form>
         </div>
-    </section>
-    <!-- Article Section -->
-    <section class="articles-section">
-        <div class="article-content">
-            <div class="title">
-                <h2>Recent Articles</h2>
-                <p>Product releases and Company updates from the FireCube Team</p>
-            </div>
-            <div class="cards">
-                <div class="card">
-                    <div class="image-section">
-                        <img src="images\kaibab-article.jfif" alt="Dragon Bravo Fire Kaibab Plateau Arizona">
-                    </div>
-                    <div class="article">
-                        <h4>Our support for the Kaibab Forest</h4>
-                        <p>
-                            Between July and August of 2025 thousands of acres of 
-                            land were scorched on the <a class="source-link" href="https://en.wikipedia.org/wiki/Dragon_Bravo_Fire" target="_blank">Kaiabab Plateau</a> learn 
-                            how were doing our part to help regrow this beautiful forest.
-                        </p>
-                    </div>
-                    <div class="blog-view">
-                        <a href="" class="read-button">Read More</a>
-                    </div>
-                    <div class="posted-date">
-                        <p>Posted on Sep-14-2025</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="image-section">
-                        <img src="images\team-trees-article.jpeg" alt="Farmer holding a tree sapling">
-                    </div>
-                    <div class="article">
-                        <h4>Our partnership with Team Trees</h4>
-                        <p>
-                            FireCube is excited to announce its partnership with 
-                            <a href="https://teamtrees.org/" class="source-link" target="_blank">Team Trees</a>, a global initiative aimed at 
-                            combating deforestation and promoting 
-                            environmental sustainability. Through this collaboration, 
-                            FireCube pledges to support Team Trees' 
-                            mission of planting 20 million trees by 2026. 
-                        </p>
-                    </div>
-                    <div class="blog-view">
-                        <a href="" class="read-button">Read More</a>
-                    </div>
-                    <div class="posted-date">
-                        <p>Posted on Sep-14-2025</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="image-section">
-                        <img src="images\cookout-cube-article.jpg" alt="Farmer holding a tree sapling">
-                    </div>
-                    <div class="article">
-                        <h4>Introducing the all new Cookout Cube!</h4>
-                        <p>
-                            We are excited to realease the 
-                            long awaited <a href="https://www.ebay.com/" title="View on Ebay" class="promo-link">Cookout Cube</a> an all in 
-                            one solution to home BBQs that comes in a box!
-                            Cedar and Oak hardwood makes for a delicous smokey tase whether your 
-                            cooking hotdogs, burgers or steak. Just set down 
-                            the cube light it and get to cookin'!
-                        </p>
-                    </div>
-                    <div class="blog-view">
-                        <a href="" class="read-button">Read More</a>
-                    </div>
-                    <div class="posted-date">
-                        <p>Posted on Sep-14-2025</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="image-section">
-                        <img src="images\bonfire-cube-article.jpg" alt="Farmer holding a tree sapling">
-                    </div>
-                    <div class="article">
-                        <h4>Ready to party? Try out the Bonfire Cube!</h4>
-                        <p>
-                            We are excited to release the <a href="https://www.ebay.com/" title="View on Ebay" class="promo-link">Bonfire Cube</a> 
-                            perfect for party enthusiasts and family cookouts. With 50 pounds of wood to last you through the evening
-                            no hassle to piling wood just set, light and party!
-                        </p>
-                    </div>
-                    <div class="blog-view">
-                        <a href="" class="read-button">Read More</a>
-                    </div>
-                    <div class="posted-date">
-                        <p>Posted on Sep-14-2025</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
     <footer>
         <div class="footerContainer">
             <div class="socialIcons">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-tiktok"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href="www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </div>
             <div class="footerNav">
                 <ul>
-                    <li><a href="/">FireCube</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="products">Products</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="affiliates">Affiliate Program</a></li>
-                    <li><a href="terms">Terms</a></li>
+                    <li><a href="index.html">FireCube</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="affiliates.html">Affiliate Program</a></li>
+                    <li><a href="terms.html">Terms</a></li>
                 </ul>
             </div>
 
         </div>
         <div class="footerBottom">
-            <p>Copyright &copy;2025; v1.0</p>
+            <p>Copyright &copy;2025; v2.0</p>
         </div>
     </footer>
 </body>
-
 </html>

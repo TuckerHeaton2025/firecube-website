@@ -394,3 +394,7 @@ form .contact-buttons .btn:hover {
     transform: scale(0.87);
     transform-origin: 0 0;
 }
+
+main{
+    margin-top: 64px;
+}

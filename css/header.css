@@ -2,119 +2,123 @@
     src: url("/fonts/Roboto-VariableFont_wdth,wght.ttf");
     font-family: 'Roboto';
 }
-
 * {
     font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 ::selection{
     color: #ffffff;
     background-color: #252525;
 }
-:root {
-    --color-1: #474747;
-    --text-color: #f0f0f0;
-    --accent-color: #222222;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-nav {
-    height: 60px;
-    background-color: var(--color-1);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.links-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-nav a {
-    height: 100%;
-    padding: 0 20px;
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #252525;
+    padding: 0px 7%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+}
+
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #ff4400;
     text-decoration: none;
-    color: var(--text-color);
-    font-size: 1.2em;
-    transition: 0.3s ease-in-out;
 }
 
-nav a:hover {
-    background-color: var(--accent-color);
+header .navbar ul{
+    list-style: none;
 }
 
-nav .home-link {
-    font-size: 1.4em;
-    margin-right: auto;
-    color: #ff4500;
-    font-weight: 600;
+header .navbar ul li{
+    position: relative;
+    float: left;
 }
 
-nav svg {
-    fill: var(--text-color);
+header .navbar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
 }
 
-#sidebar-active {
+header .navbar ul li a:hover{
+    background-color: #141414;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #3d3d3d;
     display: none;
 }
 
-.open-sidebar-button,
-.close-sidebar-button {
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
     display: none;
 }
 
-@media(max-width: 550px) {
-    .links-container {
-        flex-direction: column;
-        align-items: flex-start;
+header label{
+    font-size: 25px;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+}
 
-        position: fixed;
-        top: 0;
-        right: -100%;
-        z-index: 10;
-        width: 300px;
+/* MEDIA */
 
-        background-color: var(--color-1);
-        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
-        transition: 0.75s ease-out;
-    }
-
-    nav a {
-        box-sizing: border-box;
-        height: auto;
-        width: 100%;
-        padding: 20px 30px;
-        justify-content: flex-start;
-    }
-
-    .open-sidebar-button,
-    .close-sidebar-button {
+@media (max-width: 662px){
+    header{
         padding: 20px;
-        display: block;
     }
 
-    #sidebar-active:checked~.links-container {
-        right: 0;
+    header label{
+        display: initial;
     }
 
-    #sidebar-active:checked~#overlay {
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        top: 0;
+    header .navbar{
+        position: absolute;
+        top: 100%;
         left: 0;
-        z-index: 9;
+        right: 0;
+        background:#3d3d3d;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: none;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background: #505050;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
     }
 }

@@ -3,10 +3,13 @@ body{
     background-position: center;
     background-size: cover;
 }
+.site{
+    margin-top: 0px
+}
 .image-slider-container{
     position: absolute;
     width: 99vw;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -160,6 +163,9 @@ body{
         padding-top: 5px;
         padding-right: 20px;
     }
+    .site{
+       margin-top: 64px
+    }
 }
 @media (max-width: 950px){
     .image-slider{
@@ -230,7 +236,7 @@ body{
 }
 /* TESTIMONIALS/REVIEWS CSS */
 .pg1{
-    min-height: 115vh;
+    min-height: 95vh;
 }
 #testimonials{
     display: flex;
@@ -238,6 +244,7 @@ body{
     align-items: center;
     flex-direction: column;
     width: 100%;
+    padding-top: 50px;
 }
 .testimonial-heading{
     letter-spacing: 1px;
@@ -366,6 +373,7 @@ body{
     height: 100%;
 }
 .vid-cont{
+    margin-top: 50px;
     min-height: 100vh;
     padding-top: 25vh;
     margin-bottom: 100px;

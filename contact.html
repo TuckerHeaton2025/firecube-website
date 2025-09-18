@@ -14,27 +14,29 @@
 </head>
 <body>
     <header>
-        <nav>
-            <input type="checkbox" id="sidebar-active">
-            <label for="sidebar-active" class="open-sidebar-button">
-                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff">
-                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                </svg>
-            </label>
-            <label id="overlay" for="sidebar-active"></label>
-            <div class="links-container">
-                <label for="sidebar-active" class="close-sidebar-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"
-                        fill="#ffffff">
-                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
-                    </svg>
-                </label>
+        <a href="/" class="logo">FireCube🔥</a>
 
-                <a class="home-link" href="/">FireCube🔥</a>
-                <a href="about">About</a>
-                <a href="products">Products</a>
-                <a href="contact">Contact</a>
-            </div>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar"><i class="fa-solid fa-bars"></i></label>
+
+        <nav class="navbar">
+            <ul>
+                <li><a>Products <i class="fa-solid fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="products.html">Images</a></li>
+                        <li><a href="products.html#testimonials">Reviews</a></li>
+                        <li><a href="products.html#vid">Tutorial</a></li>
+                    </ul>
+                </li>
+                <li><a>About <i class="fa-solid fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html#mission">Our Mission</a></li>
+                        <li><a href="about.html#newsletter">Newsletter</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
     
@@ -130,12 +132,12 @@
             </div>
             <div class="footerNav">
                 <ul>
-                    <li><a href="/">FireCube</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="products">Products</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="affiliates">Affiliate Program</a></li>
-                    <li><a href="terms">Terms</a></li>
+                    <li><a href="index.html">FireCube</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="affiliates.html">Affiliate Program</a></li>
+                    <li><a href="terms.html">Terms</a></li>
                 </ul>
             </div>
 
@@ -150,5 +152,4 @@
 </body>
 <!-- CONTACT FORM SCRIPT -->
 <script src="js-scripts/app.js"></script>
-
 </html>

@@ -6,6 +6,7 @@ body{
 main{
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
+    margin-top: 60px;
 }
 .about-section{
     min-height: 100vh;
@@ -160,6 +161,7 @@ main{
 
 .mission-section{
     min-height: 50vh;
+    padding-top: 100px;
 }
 .mission-title{
     text-align: center;
@@ -344,3 +346,6 @@ main{
         font-size: 12px;
     }
 }
+
+/* FUNCTIONAL NEWSLETTER V2.1 */
+

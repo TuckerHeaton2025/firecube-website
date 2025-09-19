@@ -10,15 +10,6 @@ function isTouchDevice() {
 if (isTouchDevice()) {
     windowsize = $(window).width();
 
-
-    $(window).resize(function() {
-
-        location.reload(true); 
-
-    });
-
-
-
     var windowsize = $(window).width();
     if(windowsize > 1060){
         $(document).ready(function () {

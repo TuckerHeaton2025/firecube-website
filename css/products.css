@@ -4,7 +4,7 @@ body{
     background-size: cover;
 }
 .site{
-    margin-top: 0px
+    margin-top: 10px
 }
 .image-slider-container{
     position: absolute;
@@ -357,33 +357,27 @@ body{
 }
 /* YOUTUBE VIDEO */
 
-.youtube-vid-section{
-    width: 70vw;
-    background-color: #3d3d3d;
+.youtube-video{
+    padding-top: 230px;
+    padding-bottom: 250px;
+    min-height: 100vh;
+}
+
+.iframe-container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.iframe-wrap{
     position: relative;
     overflow: hidden;
-    padding-top: 56.25%;
-    margin: auto;
+    height: 0;
+    padding-bottom: 56%;
 }
-.youtube-vid-section #yt-vid{
+
+.iframe-wrap > iframe{
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
 }
-.vid-cont{
-    margin-top: 50px;
-    min-height: 100vh;
-    padding-top: 25vh;
-    margin-bottom: 100px;
-}
 
-@media (max-width: 1000px){
-    .youtube-vid-section{
-        width: 90vw;
-    }
-    .vid-cont{
-        margin-bottom: 50px;
-    }
-}

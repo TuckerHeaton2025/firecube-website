@@ -1,3 +1,4 @@
+// Check if the device is touchscreen (NOT SURE)
 function isTouchDevice() {
   return (('ontouchstart' in window) ||
      (navigator.maxTouchPoints > 0) ||
@@ -11,7 +12,15 @@ if(isTouchDevice()){
     $(document).ready(function () {
         //toggle sub-menus
         $(".sub-btn").click(function () {
-            $(this).next(".sub-menu").slideToggle();
+            // If the clicked sub-menu is already open, close it
+            if ($(this).next(".sub-menu").is(":visible")) {
+                $(this).next(".sub-menu").slideUp();
+            } else {
+                // Close all other sub-menus first
+                $(".sub-menu, .more-menu").slideUp();
+                // Then open the clicked one
+                $(this).next(".sub-menu").slideDown();
+            }
         });
 
         //toggle more-menus

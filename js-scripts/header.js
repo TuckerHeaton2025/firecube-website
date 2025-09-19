@@ -9,6 +9,10 @@ $(document).ready(function () {
     $(".more-btn").click(function () {
         $(this).next(".more-menu").slideToggle();
     });
+    
+    $(".close-btn").click(function () {
+        $(".sub-menu, .more-menu").slideUp();  // Hide all dropdown menus
+    });
 });
 
 //javascript for the responsive navigation menu

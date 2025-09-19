@@ -8,19 +8,30 @@ function isTouchDevice() {
 
 //jquery for toggle dropdown menus
 if (isTouchDevice()) {
+    windowsize = $(window).width();
+
+
+    $(window).resize(function() {
+
+        location.reload(true); 
+
+    });
+
+
+
     var windowsize = $(window).width();
     if(windowsize > 1060){
-
-        $(".menu-item").click(function () {
-            $(this).next(".sub-menu").css("opacity", 1);
-        });
-        $('body').click(function(event) {
-        if ($(".sub-menu").css("opacity" == 1)) {
-            $('.sub-menu').css("opacity", 0)
-        };
+        $(document).ready(function () {
+            $(".menu-item").click(function () {
+                $(this).next(".sub-menu").css("opacity", 1);
+            });
+            $('body').click(function(event) {
+                if ($(".sub-menu").css("opacity" == 1)) {
+                    $('.sub-menu').css("opacity", 0)
+                }
+            });
         });
     }
-
     else {
 
         $(document).ready(function () {

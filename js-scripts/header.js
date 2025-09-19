@@ -1,20 +1,29 @@
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
+
+
 //jquery for toggle dropdown menus
-$(document).ready(function () {
-    //toggle sub-menus
-    $(".sub-btn").click(function () {
-        $(this).next(".sub-menu").slideToggle();
-    });
+if(isTouchDevice()){
 
-    //toggle more-menus
-    $(".more-btn").click(function () {
-        $(this).next(".more-menu").slideToggle();
-    });
-    
-    $(".close-btn").click(function () {
-        $(".sub-menu, .more-menu").slideUp();  // Hide all dropdown menus
-    });
-});
+    $(document).ready(function () {
+        //toggle sub-menus
+        $(".sub-btn").click(function () {
+            $(this).next(".sub-menu").slideToggle();
+        });
 
+        //toggle more-menus
+        $(".more-btn").click(function () {
+            $(this).next(".more-menu").slideToggle();
+        });
+        
+        $(".close-btn").click(function () {
+            $(".sub-menu, .more-menu").slideUp();  // Hide all dropdown menus
+        });
+    });
+}
 //javascript for the responsive navigation menu
 var menu = document.querySelector(".menu");
 var menuBtn = document.querySelector(".menu-btn");
